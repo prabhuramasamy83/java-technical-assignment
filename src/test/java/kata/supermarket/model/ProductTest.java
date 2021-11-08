@@ -11,6 +11,7 @@ class ProductTest {
     @Test
     void singleItemHasExpectedUnitPriceFromProduct() {
         final BigDecimal price = new BigDecimal("2.49");
-        assertEquals(price, new Product(price).oneOf().price());
+        Product product = new Product("Coffee", price);
+        assertEquals(price, product.oneOf().price());
     }
 }
