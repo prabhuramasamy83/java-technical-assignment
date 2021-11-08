@@ -1,5 +1,6 @@
 package kata.supermarket.service;
 
+import kata.supermarket.constant.ProductNames;
 import kata.supermarket.model.Product;
 import kata.supermarket.model.WeighedProduct;
 import kata.supermarket.scale.Item;
@@ -61,19 +62,19 @@ class BasketTest {
     }
 
     private static Item aPintOfMilk() {
-        return new Product("Milk", new BigDecimal("0.49")).oneOf();
+        return new Product(ProductNames.Milk.name(), new BigDecimal("0.49")).oneOf();
     }
 
     private static Item aPackOfDigestives() {
-        return new Product("Digestives", new BigDecimal("1.55")).oneOf();
+        return new Product(ProductNames.Digestives.name(), new BigDecimal("1.55")).oneOf();
     }
 
     private static Item aPackOfIceCream() {
-        return new Product("IceCream", new BigDecimal("2.33")).oneOf();
+        return new Product(ProductNames.IceCream.name(), new BigDecimal("2.33")).oneOf();
     }
 
     private static WeighedProduct aKiloOfAmericanSweets() {
-        return new WeighedProduct("AmericanSweets", new BigDecimal("4.99"));
+        return new WeighedProduct(ProductNames.AmericanSweets.name(), new BigDecimal("4.99"));
     }
 
     private static Item twoFiftyGramsOfAmericanSweets() {
@@ -81,7 +82,7 @@ class BasketTest {
     }
 
     private static WeighedProduct aKiloOfPickAndMix() {
-        return new WeighedProduct("PickAndMix", new BigDecimal("2.99"));
+        return new WeighedProduct(ProductNames.PickAndMix.name(), new BigDecimal("2.99"));
     }
 
     private static Item twoHundredGramsOfPickAndMix() {

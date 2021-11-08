@@ -1,5 +1,6 @@
 package kata.supermarket.model;
 
+import kata.supermarket.constant.ProductNames;
 import kata.supermarket.scale.Item;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -15,7 +16,7 @@ class WeighedProductTest {
     @ParameterizedTest
     @MethodSource
     void itemFromWeighedProductHasExpectedUnitPrice(String pricePerKilo, String weightInKilos, String expectedPrice) {
-        final WeighedProduct weighedProduct = new WeighedProduct("Rice", new BigDecimal(pricePerKilo));
+        final WeighedProduct weighedProduct = new WeighedProduct(ProductNames.Rice.name(), new BigDecimal(pricePerKilo));
         final Item weighedItem = weighedProduct.weighing(new BigDecimal(weightInKilos));
         assertEquals(new BigDecimal(expectedPrice), weighedItem.price());
     }
