@@ -1,4 +1,4 @@
-package kata.supermarket;
+package kata.supermarket.service;
 
 import kata.supermarket.model.Product;
 import kata.supermarket.model.WeighedProduct;
@@ -17,12 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BasketTest {
 
+    private Basket basket = new BasketImpl(); //In Spring this could be autowired using @Autowired annotation
+
     @DisplayName("basket provides its total value when containing...")
     @MethodSource
     @ParameterizedTest(name = "{0}")
     void basketProvidesTotalValue(String description, String expectedTotal, Iterable<Item> items) {
-        final Basket basket = new Basket();
-        items.forEach(basket::add);
+        items.forEach(basket::addItem);
         assertEquals(new BigDecimal(expectedTotal), basket.total());
     }
 

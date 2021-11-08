@@ -1,4 +1,4 @@
-package kata.supermarket;
+package kata.supermarket.service;
 
 import kata.supermarket.calculator.TotalCalculator;
 import kata.supermarket.calculator.TotalCalculatorImpl;
@@ -9,26 +9,28 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Basket {
+public class BasketImpl implements Basket{
+
     private final List<Item> items;
 
-    private TotalCalculator totalCalculator; //When Spring is used we can autowire this component using @Autowire
+    private TotalCalculator totalCalculator = new TotalCalculatorImpl(); //In Spring this could be autowired using @Autowired annotation
 
-    public Basket() {
+    public BasketImpl() {
         this.items = new ArrayList<>();
-        this.totalCalculator = new TotalCalculatorImpl();
     }
 
-    public void add(final Item item) {
+    @Override
+    public void addItem(final Item item) {
         this.items.add(item);
     }
 
-    List<Item> items() {
+    @Override
+    public List<Item> listItems() {
         return Collections.unmodifiableList(items);
     }
 
+    @Override
     public BigDecimal total() {
-        return this.totalCalculator.calculate(items());
+        return totalCalculator.calculate(listItems());
     }
-
 }
