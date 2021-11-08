@@ -30,11 +30,11 @@ class BasketTest {
 
     static Stream<Arguments> basketProvidesTotalValue() {
         return Stream.of(
-                //noItems(),
-                //aSingleItemPricedPerUnit(),
-                //multipleItemsPricedPerUnit(),
-               // aSingleItemPricedByWeight(),
-               // multipleItemsPricedByWeight(),
+                noItems(),
+                aSingleItemPricedPerUnit(),
+                multipleItemsPricedPerUnit(),
+                aSingleItemPricedByWeight(),
+                multipleItemsPricedByWeight(),
                 buyOneGetOneFreeItemPricedPerUnit()
         );
     }
