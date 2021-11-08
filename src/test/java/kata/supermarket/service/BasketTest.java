@@ -35,7 +35,8 @@ class BasketTest {
                 multipleItemsPricedPerUnit(),
                 aSingleItemPricedByWeight(),
                 multipleItemsPricedByWeight(),
-                buyOneGetOneFreeItemPricedPerUnit()
+                buyOneGetOneFreeItemPricedPerUnit(),
+                multipleBuyOneGetOneFreeItemPricedPerUnit()
         );
     }
 
@@ -60,6 +61,11 @@ class BasketTest {
 
     private static Arguments buyOneGetOneFreeItemPricedPerUnit() {
         return Arguments.of("buy one and get one item free priced per unit", "4.66", Arrays.asList(aPackOfIceCream(), aPackOfIceCream(),aPackOfIceCream()));
+    }
+
+    private static Arguments multipleBuyOneGetOneFreeItemPricedPerUnit() {
+        return Arguments.of("multiple buy one and get one item free priced per unit", "2.82", Arrays.asList(aPackOfIceCream(), aPackOfIceCream(),
+                aPintOfMilk(), aPintOfMilk()));
     }
 
     private static Arguments noItems() {
