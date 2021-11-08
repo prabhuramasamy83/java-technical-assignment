@@ -1,4 +1,4 @@
-package kata.supermarket;
+package kata.supermarket.scale;
 
 import kata.supermarket.model.Product;
 

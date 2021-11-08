@@ -2,6 +2,7 @@ package kata.supermarket;
 
 import kata.supermarket.calculator.TotalCalculator;
 import kata.supermarket.calculator.TotalCalculatorImpl;
+import kata.supermarket.scale.Item;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

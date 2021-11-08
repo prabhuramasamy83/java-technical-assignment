@@ -1,6 +1,6 @@
 package kata.supermarket.calculator;
 
-import kata.supermarket.Item;
+import kata.supermarket.scale.Item;
 
 import java.math.BigDecimal;
 import java.util.List;

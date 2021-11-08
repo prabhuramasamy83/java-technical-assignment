@@ -1,6 +1,6 @@
 package kata.supermarket.model;
 
-import kata.supermarket.Item;
+import kata.supermarket.scale.Item;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

@@ -1,7 +1,7 @@
 package kata.supermarket.model;
 
-import kata.supermarket.Item;
-import kata.supermarket.ItemByWeight;
+import kata.supermarket.scale.Item;
+import kata.supermarket.scale.ItemByWeight;
 
 import java.math.BigDecimal;
 
