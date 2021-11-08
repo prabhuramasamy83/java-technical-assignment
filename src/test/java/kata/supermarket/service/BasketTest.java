@@ -30,11 +30,12 @@ class BasketTest {
 
     static Stream<Arguments> basketProvidesTotalValue() {
         return Stream.of(
-                noItems(),
-                aSingleItemPricedPerUnit(),
-                multipleItemsPricedPerUnit(),
-                aSingleItemPricedByWeight(),
-                multipleItemsPricedByWeight()
+                //noItems(),
+                //aSingleItemPricedPerUnit(),
+                //multipleItemsPricedPerUnit(),
+               // aSingleItemPricedByWeight(),
+               // multipleItemsPricedByWeight(),
+                buyOneGetOneFreeItemPricedPerUnit()
         );
     }
 
@@ -55,6 +56,10 @@ class BasketTest {
 
     private static Arguments aSingleItemPricedPerUnit() {
         return Arguments.of("a single item priced per unit", "0.49", Collections.singleton(aPintOfMilk()));
+    }
+
+    private static Arguments buyOneGetOneFreeItemPricedPerUnit() {
+        return Arguments.of("buy one and get one item free priced per unit", "4.66", Arrays.asList(aPackOfIceCream(), aPackOfIceCream(),aPackOfIceCream()));
     }
 
     private static Arguments noItems() {
