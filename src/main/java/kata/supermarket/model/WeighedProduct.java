@@ -1,4 +1,7 @@
-package kata.supermarket;
+package kata.supermarket.model;
+
+import kata.supermarket.Item;
+import kata.supermarket.ItemByWeight;
 
 import java.math.BigDecimal;
 
@@ -10,7 +13,7 @@ public class WeighedProduct {
         this.pricePerKilo = pricePerKilo;
     }
 
-    BigDecimal pricePerKilo() {
+    public BigDecimal pricePerKilo() {
         return pricePerKilo;
     }
 
